@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>turtle graphics language WIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+
+<body>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-4">
+      <button class="btn btn-primary" id="runBtn">Run</button>
+      <button class="btn btn-danger" id="clearBtn">Clear</button>
+      <br/>
+      <div id="buttonGrid">
+        <div class='row text-center'>
+          <button class="btn btn-primary" id="forwardBtn">FORWARD</button>
+        </div>
+        <div class='row text-center'>
+          <button class="btn btn-primary" id="leftBtn">LEFT</button>
+          <button class="btn btn-primary" id="backBtn">BACK</button>
+          <button class="btn btn-primary" id="rightBtn">RIGHT</button>
+        </div>
+      </div>
+      <textarea id="programTA" cols="30" rows="10" placeholder="Program goes here...">
+        repeat 2 [
+          color r255 r255 r255
+          forward rr40:80
+          repeat 3 [
+            forward 100
+            left rr90:100    
+          ]
+          forward 50
+          left 90    
+        ]
+        color 255 0 0
+        repeat 4 [
+          forward 30
+          left 90        
+        ]
+      </textarea>
+      <br/>
+
+    </div>
+
+    <div class="col-xs-8">
+      <div id="p5CanvasParent">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/p5.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/addons/p5.dom.min.js'></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
