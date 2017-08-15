@@ -139,7 +139,7 @@ function executeProgram() {
   var ix = 0;
   var count = 0;
   
-  while (ix < gProgram.length && count < 100) {
+  while (ix < gProgram.length && count < 10000) {
     var item = gProgram[ix];    
     if (item[0] === 'repeat') {
         gLoopPoints.push([1+ix, parseFloatOrRandom(item[1])]);
